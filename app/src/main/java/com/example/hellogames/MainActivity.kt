@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val data = arrayListOf<GameList>()
         val baseURL = "https://androidlessonsapi.herokuapp.com/api/"
         // Use GSON library to create our JSON parser
         val jsonConverter = GsonConverterFactory.create(GsonBuilder().create())
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                 if (response.code() == 200){
                     if(response.body() != null){
                         val data : List<GameList> = response.body()!! // "!!" pour garantir que c'est non null
-                      //  Toast.makeText(this@MainActivity, "Size = "+data.size.toString(), Toast.LENGTH_SHORT).show()
                         // display performance optimization when list widget size does not change
                         RecyclerListGame.setHasFixedSize(true)
                         // here we specify this is a standard vertical list
@@ -74,8 +72,7 @@ class MainActivity : AppCompatActivity() {
                             val explicitIntent = Intent(this@MainActivity,
                                                             GameDetailsActivity::class.java)
                             // Insert extra data in the intent
-                            val message = "Hello from another world"
-                            explicitIntent.putExtra("MESSAGE", message)
+                            explicitIntent.putExtra("GAME_ID", clickedItem.id.toString())
                             // Start the other activity by sending the intent
                             startActivity(explicitIntent)
                         }

@@ -1,11 +1,11 @@
 package com.example.hellogames
 
-class GameDetails (id : Int,
-                   name : String,
-                   type : String,
-                   players : Int,
-                   year : Int,
-                   url : String,
-                   picture : String,
-                   description_fr : String,
-                   description_en : String)
+class GameDetails (val id : Int,
+                   val name : String,
+                   val type : String,
+                   val players : Int,
+                   val year : Int,
+                   val url : String,
+                   val picture : String,
+                   val description_fr : String,
+                   val description_en : String)

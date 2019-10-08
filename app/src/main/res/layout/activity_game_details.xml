@@ -6,4 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".GameDetailsActivity">
 
+    <TextView
+        android:id="@+id/activity_game_details_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Game Info"
+        android:textColor="#00BCD4"
+        android:textColorLink="#00BCD4"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/activity_game_details_img"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_title"
+        tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-43dp" />
+
+
+    <TextView
+        android:id="@+id/activity_game_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
+        android:text="Name: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/activity_game_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_title" />
+
+    <TextView
+        android:id="@+id/activity_game_details_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Type: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/activity_game_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_name" />
+
+    <TextView
+        android:id="@+id/activity_game_details_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Players: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/activity_game_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_type" />
+
+    <TextView
+        android:id="@+id/activity_game_details_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Year: "
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/activity_game_details_img"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_players" />
+
+    <TextView
+        android:id="@+id/activity_game_details_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_game_details_img" />
+
+    <Button
+        android:id="@+id/activity_game_details_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DO YOU WANT TO KNOW MORE ?"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="698dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
